@@ -1,39 +1,40 @@
 if ("serviceWorker" in navigator) {
+    // Mengecek apakah browser mendukung Service Worker
     window.addEventListener("load", function () {
-      navigator.serviceWorker.register("service-worker.js").then(
-        function (registration) {
-          console.log("Registrasi sw berhasil: ", registration.scope);
-        },
-        function (err) {
-          console.log("Registrasi sw gagal: ", err);
-        }
-      );
+        navigator.serviceWorker.register("service-worker.js").then(
+            function (registration) {
+                console.log("Registrasi sw berhasil: ", registration.scope); // Jika berhasil, log pesan sukses
+            },
+            function (err) {
+                console.log("Registrasi sw gagal: ", err); // Jika gagal, log pesan error
+            }
+        );
     });
-  }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Halaman awal tidak menampilkan film apapun
+    // Saat DOM selesai dimuat, halaman awal tidak menampilkan film apapun
 });
 
 function showAddMovieDropdown() {
-    document.getElementById('add-movie-dropdown').style.display = 'block';
+    document.getElementById('add-movie-dropdown').style.display = 'block'; // Menampilkan dropdown untuk menambah film
 }
 
 function addSelectedMovie() {
     const movieSelect = document.getElementById('movie-select');
     const selectedOption = movieSelect.value;
-    const [title, price, description] = selectedOption.split(' - ');
+    const [title, price, description] = selectedOption.split(' - '); // Memisahkan judul, harga, dan deskripsi dari opsi yang dipilih
 
     const movie = { title, price, description };
-    addMovieCard(movie);
+    addMovieCard(movie); // Menambahkan kartu film baru
 
-    document.getElementById('add-movie-dropdown').style.display = 'none';
+    document.getElementById('add-movie-dropdown').style.display = 'none'; // Menyembunyikan dropdown setelah film ditambahkan
 }
 
 function addMovieCard(movie) {
     const moviesList = document.getElementById('movies-list');
     const movieCard = document.createElement('div');
-    movieCard.classList.add('col-md-6', 'mb-4');
+    movieCard.classList.add('col-md-6', 'mb-4'); // Menambahkan kelas CSS untuk tata letak
 
     let imageName = "";
 
@@ -60,7 +61,7 @@ function addMovieCard(movie) {
             imageName = "placeholder.jpg";
     }
 
-    const imagePath = `images/${imageName}`; // Path gambar
+    const imagePath = `images/${imageName}`; // Path gambar untuk film
 
     movieCard.innerHTML = `
         <div class="card">
@@ -72,12 +73,12 @@ function addMovieCard(movie) {
                 <button class="btn btn-danger" onclick="removeMovieCard(this)">Hapus Film</button>
             </div>
         </div>
-    `;
+    `; // Menyusun struktur HTML untuk kartu film
 
-    moviesList.appendChild(movieCard);
+    moviesList.appendChild(movieCard); // Menambahkan kartu film ke dalam daftar film
 }
 
 function removeMovieCard(button) {
-    const cardToRemove = button.closest('.col-md-6');
-    cardToRemove.remove();
+    const cardToRemove = button.closest('.col-md-6'); // Menemukan elemen kartu yang terdekat
+    cardToRemove.remove(); // Menghapus kartu film dari DOM
 }
