@@ -1,48 +1,48 @@
 body {
-    background-color: #f8f9fa;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-color: #f8f9fa; // Warna latar belakang untuk elemen body
+    padding-top: 20px; // Padding atas untuk elemen body
+    padding-bottom: 20px; // Padding bawah untuk elemen body
 }
 
 header {
-    margin-bottom: 20px;
+    margin-bottom: 20px; // Margin bawah untuk elemen header
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 20px; // Margin atas untuk elemen footer
 }
 
 @media (max-width: 576px) {
     .card-title {
-        font-size: 16px;
+        font-size: 16px; // Ukuran font untuk judul kartu di perangkat dengan lebar maksimal 576px
     }
 
     .card-text {
-        font-size: 14px;
+        font-size: 14px; // Ukuran font untuk teks kartu di perangkat dengan lebar maksimal 576px
     }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
     .card-title {
-        font-size: 18px;
+        font-size: 18px; // Ukuran font untuk judul kartu di perangkat dengan lebar antara 577px dan 768px
     }
 
     .card-text {
-        font-size: 16px;
+        font-size: 16px; // Ukuran font untuk teks kartu di perangkat dengan lebar antara 577px dan 768px
     }
 }
 
 @media (min-width: 769px) {
     .card-title {
-        font-size: 20px;
+        font-size: 20px; // Ukuran font untuk judul kartu di perangkat dengan lebar minimal 769px
     }
 
     .card-text {
-        font-size: 18px;
+        font-size: 18px; // Ukuran font untuk teks kartu di perangkat dengan lebar minimal 769px
     }
 }
 
 .card-img-top {
-    height: 300px;
-    object-fit: cover;
+    height: 300px; // Tinggi tetap untuk gambar di atas kartu
+    object-fit: cover; // Mengatur gambar agar tetap proporsional dengan menutupi seluruh area tanpa distorsi
 }
