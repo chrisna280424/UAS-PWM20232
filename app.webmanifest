@@ -1,7 +1,7 @@
 {
     "name": "Cinema Kalasan",
-    "short_name": "Cinema Kalasan",
-    "description": "Aplikasi untuk melihat jadwal film di Cinema Kalasan",
+    "short_name": "Cinema Kalasan", // Nama singkat aplikasi
+    "description": "Aplikasi untuk melihat jadwal film di Cinema Kalasan", // Deskripsi aplikasi
     "icons": [
         {
             "src": "icons/48x48.png",
@@ -34,9 +34,8 @@
             "type": "image/png"
         }
     ],
-
-    "start_url": "index.html",
-    "display": "fullscreen",
-    "theme_color": "#883D1A",
-    "background_color": "#f8f9fa"
+    "start_url": "index.html", // URL awal aplikasi saat dibuka
+    "display": "fullscreen", // Mode tampilan aplikasi (fullscreen)
+    "theme_color": "#883D1A", // Warna tema aplikasi
+    "background_color": "#f8f9fa" // Warna latar belakang aplikasi
 }
