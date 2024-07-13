@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="inline.css">
+    <link rel="manifest" href="app.webmanifest">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="icons.ico">
+    <title>Cinema Kalasan</title>
+</head>
+<body>
+    <div class="container">
+        <header class="my-4">
+           <h1 class="text-center">Yang Bisa Ditonton di Cinema Kalasan</h1>
+        </header>
+        <main>
+            <div id="movies-list" class="row"></div>
+            <div class="text-center mt-4">
+                <button class="btn btn-success" onclick="showAddMovieDropdown()">Tambah Film</button>
+            </div>
+            <div id="add-movie-dropdown" class="mt-4" style="display: none;">
+                <h2 class="text-center">Pilih Film yang Ingin Ditonton</h2>
+                <select class="form-control" id="movie-select">
+                    <option value="Despicable Me 4 - 60,000 IDR - Minions yang lucu kembali untuk petualangan baru.">Despicable Me 4</option>
+                    <option value="MaXXXine - 55,000 IDR - Film horor yang mendebarkan.">MaXXXine</option>
+                    <option value="Fly Me to The Moon - 50,000 IDR - Perjalanan romantis di langit.">Fly Me to The Moon</option>
+                    <option value="Twisters - 45,000 IDR - Film bencana yang penuh aksi.">Twisters</option>
+                    <option value="Agak Laen - 40,000 IDR - Komedi yang aneh dan lucu.">Agak Laen</option>
+                    <option value="Deadpool and Wolverine - 65,000 IDR - Pertarungan superhero yang epik.">Deadpool and Wolverine</option>
+                </select>
+                <button type="button" class="btn btn-primary mt-3" onclick="addSelectedMovie()">Tambah Film yang Dipilih</button>
+            </div>
+        </main>
+        <footer class="my-4 text-center">
+            <p>&copy; 2024 Cinema Kalasan XXI. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
