@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Menghubungkan file CSS Bootstrap dari CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Menghubungkan file CSS lokal -->
     <link rel="stylesheet" href="inline.css">
+    <!-- Menghubungkan manifest file untuk aplikasi web -->
     <link rel="manifest" href="app.webmanifest">
+    <!-- Menghubungkan file CSS Bootstrap lokal -->
     <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- Menghubungkan ikon favicon -->
     <link rel="icon" type="image/x-icon" href="icons.ico">
     <title>Cinema Kalasan</title>
 </head>
@@ -14,15 +19,20 @@
     <div class="container">
         <header class="my-4">
            <h1 class="text-center">Yang Bisa Ditonton di Cinema Kalasan</h1>
+           <!-- Judul aplikasi dengan margin vertikal -->
         </header>
         <main>
             <div id="movies-list" class="row"></div>
+            <!-- Tempat untuk menampilkan daftar film yang dipilih -->
             <div class="text-center mt-4">
                 <button class="btn btn-success" onclick="showAddMovieDropdown()">Tambah Film</button>
+                <!-- Tombol untuk menambah film baru -->
             </div>
             <div id="add-movie-dropdown" class="mt-4" style="display: none;">
+                <!-- Dropdown untuk memilih film yang ingin ditambahkan -->
                 <h2 class="text-center">Pilih Film yang Ingin Ditonton</h2>
                 <select class="form-control" id="movie-select">
+                    <!-- Opsi film yang tersedia dengan format "judul - harga - deskripsi" -->
                     <option value="Despicable Me 4 - 60,000 IDR - Minions yang lucu kembali untuk petualangan baru.">Despicable Me 4</option>
                     <option value="MaXXXine - 55,000 IDR - Film horor yang mendebarkan.">MaXXXine</option>
                     <option value="Fly Me to The Moon - 50,000 IDR - Perjalanan romantis di langit.">Fly Me to The Moon</option>
@@ -31,13 +41,17 @@
                     <option value="Deadpool and Wolverine - 65,000 IDR - Pertarungan superhero yang epik.">Deadpool and Wolverine</option>
                 </select>
                 <button type="button" class="btn btn-primary mt-3" onclick="addSelectedMovie()">Tambah Film yang Dipilih</button>
+                <!-- Tombol untuk mengonfirmasi penambahan film yang dipilih -->
             </div>
         </main>
         <footer class="my-4 text-center">
             <p>&copy; 2024 Cinema Kalasan XXI. All rights reserved.</p>
+            <!-- Footer dengan informasi hak cipta -->
         </footer>
     </div>
+    <!-- Menghubungkan file JavaScript Bootstrap lokal -->
     <script src="bootstrap.bundle.min.js"></script>
+    <!-- Menghubungkan file JavaScript utama -->
     <script src="index.js"></script>
 </body>
 </html>
